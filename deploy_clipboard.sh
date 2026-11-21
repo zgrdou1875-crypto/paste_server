@@ -130,7 +130,7 @@ done
 
 echo -e "${green}=== [4/4] 启动服务 ===${plain}"
 rm -rf /etc/nginx/conf.d/default.conf
-rm -rf /etc/nginx/sites-available/default
+rm -rf /etc/nginx/sites-enabled/default
 nginx -t
 
 systemctl daemon-reload
