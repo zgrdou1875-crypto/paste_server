@@ -133,6 +133,7 @@ rm -rf /etc/nginx/conf.d/default.conf
 rm -rf /etc/nginx/sites-enabled/default
 nginx -t
 
+systemctl start nginx 2>/dev/null || true
 systemctl daemon-reload
 systemctl start clipboard
 systemctl enable clipboard
