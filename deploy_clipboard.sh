@@ -21,9 +21,9 @@ echo -e "${green}=== [2/4] 创建目录、下载源码与配置 ===${plain}"
 mkdir -p /var/www/clipboard
 mkdir -p /root/cert
 
-curl -fsSL "https://raw.githubusercontent.com/zgrdou1/paste_server/main/paste_server.py" -o /var/www/clipboard/paste_server.py
-curl -fsSL "https://raw.githubusercontent.com/zgrdou1/paste_server/main/clipboard.service" -o /etc/systemd/system/clipboard.service
-curl -fsSL "https://raw.githubusercontent.com/zgrdou1/paste_server/main/clipboard.conf" -o /etc/nginx/conf.d/clipboard.conf
+curl -fsSL "https://raw.githubusercontent.com/zgrdou1875-crypto/paste_server/main/paste_server.py" -o /var/www/clipboard/paste_server.py
+curl -fsSL "https://raw.githubusercontent.com/zgrdou1875-crypto/paste_server/main/clipboard.service" -o /etc/systemd/system/clipboard.service
+curl -fsSL "https://raw.githubusercontent.com/zgrdou1875-crypto/paste_server/main/clipboard.conf" -o /etc/nginx/conf.d/clipboard.conf
 
 # 在 /etc/nginx/nginx.conf 的 http { ... } 块中添加 client_max_body_size 50M;（若已存在则不重复添加）
 if grep -q "client_max_body_size" /etc/nginx/nginx.conf; then
