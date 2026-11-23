@@ -114,7 +114,7 @@ while true; do
             /root/.acme.sh/acme.sh --install-cert -d "$domain_input" --ecc \
                 --fullchain-file /root/cert/fullchain.pem \
                 --key-file /root/cert/privkey.pem \
-                --reloadcmd "chmod 644 /root/cert/fullchain.pem && chmod 600 /root/cert/privkey.pem && systemctl reload nginx"
+                --reloadcmd "chmod 644 /root/cert/fullchain.pem && chmod 600 /root/cert/privkey.pem"
 
             chmod 644 /root/cert/fullchain.pem
             chmod 600 /root/cert/privkey.pem
